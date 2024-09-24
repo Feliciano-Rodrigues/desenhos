@@ -33,6 +33,7 @@
             padding: 20px;
             background: #fff;
             margin-top: 10px;
+            text-align: center; /* Alinha o conteúdo centralmente */
         }
         .main-content img {
             max-width: 305px;
@@ -41,7 +42,7 @@
             margin: auto;
         }
         .main-content h2 {
-            color: #333;
+            color: #ee1313;
             text-align: center;
         }
         .main-content h3 {
@@ -52,6 +53,13 @@
             text-align: justify;
             margin-bottom: 20px;
         }
+        .main-content iframe {
+            display: block;
+            margin: 20px auto; /* Centraliza o iframe */
+            width: 100%;
+            max-width: 560px; /* Limita a largura máxima do vídeo */
+            height: 315px; /* Proporção adequada para vídeos */
+        }
         .cta {
             background: #28a745;
             color: #fff;
@@ -60,6 +68,7 @@
             text-transform: uppercase;
             font-weight: bold;
             cursor: pointer;
+            margin-top: 20px;
         }
         .cta:hover {
             background: #218838;
@@ -75,6 +84,10 @@
             margin: 0;
         }
         footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #compre_ja {
             color: #fff;
             text-decoration: none;
         }
@@ -112,35 +125,53 @@
             }
         }
     </style>
+    <script>
+        // Função para fazer o título piscar
+        function blinkTitle() {
+            const title = document.querySelector('header h1');
+            setInterval(() => {
+                // Alterna entre 1 (visível) e 0 (invisível)
+                title.style.opacity = (title.style.opacity == '0' ? '1' : '0');
+            }, 400); // Alterna a visibilidade a cada 1 segundo
+        }
+
+        // Chama a função ao carregar a página
+        window.onload = function() {
+            blinkTitle();
+        };
+    </script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-948342225">
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-948342225"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-948342225');
 </script>
 </head>
 <body>
 
     <header>
-        <h1>xxxxxxx</h1>
+        <h1>OFERTA POR TEMPO LIMITADO! $5,99</h1>
+        
     </header>
 
     <div class="container">
         <section class="main-content">
-            <img src="./img/" alt="Imagem do Produto">
-            <h2>LIMITED TIME OFFER!</h2>
-            <h3>*Special pricing not guaranteed past today!</h3>
+            <!-- <img src="#" alt="Imagem do Produto"> -->
+            <h2>Nosso eBook “105 Desenhos de Animais Fofinhos”</h2>
+            <!-- <h3> Muitos pais estão lutando para gerenciar o tempo de tela de seus filhos e estão vendo comportamentos negativos quando os dispositivos são retirados.</h3> -->
 
-            <iframe width="800" height="700" src="https://www.youtube.com/watch?v=8buhegcheLE" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
+            <!-- Vídeo centralizado -->
+            <iframe 
+                src="https://www.youtube.com/embed/8buhegcheLE" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
     
             <div class="cta">
-                <a href="">Click here to learn more</a>
+                <a id="compre_ja" href="https://pay.hotmart.com/F88465474A?off=0ykph0kt">Compre Já</a>
             </div>
         </section>
     </div>
