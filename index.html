@@ -17,17 +17,16 @@
         }
         .container {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             width: 90%;
             margin: 20px auto;
-            overflow: hidden;
-            flex-wrap: wrap;
         }
         header {
             background: #4a90e2;
             color: #fff;
             padding: 20px 0;
+            width: 100%;
             text-align: center;
         }
         header h1 {
@@ -35,56 +34,63 @@
             font-size: 2.5em;
         }
         .main-content {
-            flex: 1;
-            padding: 20px;
             background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
             margin-top: 10px;
-            margin-right: 20px;
-        }
-        .ad-banner {
             width: 100%;
-            height: 150px; /* Diminuindo a altura do banner */
-            background: #ddd;
-            margin-top: 10px;
-            border-radius: 8px;
-            text-align: center;
-            line-height: 150px; /* Ajustando para centralizar o texto */
-            font-size: 1em;
-            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Alinha os textos ao topo */
+            flex-wrap: wrap;
+        }
+        .text-left, .text-right {
+            flex: 1;
+            margin: 10px;
+            min-width: 300px;
         }
         .main-content h2 {
             color: #d64541;
             margin: 10px 0;
         }
         .main-content p {
-            text-align: justify;
             margin: 10px 0;
             line-height: 1.5;
+        }
+        .main-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .main-content ul li {
+            margin: 5px 0;
         }
         .main-content iframe {
             display: block;
             margin: 20px auto;
             width: 100%;
-            max-width: 900px;
-            height: 500px;
+            max-width: 1000px;
+            height: 600px;
             border: none;
         }
         .cta {
-            background: #4a90e2; /* Mudando a cor do botão para azul */
+            background: #4a90e2;
             color: #fff;
             padding: 15px;
             text-align: center;
             text-transform: uppercase;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 20px;
+            margin: 20px 0;
             border-radius: 5px;
             transition: background 0.3s;
+            width: 100%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .cta:hover {
-            background: #357ABD; /* Um tom mais escuro do azul */
+            background: #357ABD;
         }
         footer {
             background: #4a90e2;
@@ -92,6 +98,7 @@
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
+            width: 100%;
         }
         footer p {
             margin: 0;
@@ -125,13 +132,6 @@
                 padding: 8px;
                 font-size: 0.9em;
             }
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .main-content {
-                margin-right: 0;
-            }
         }
     </style>
     <script>
@@ -155,38 +155,42 @@
 
     <div class="container">
         <div class="main-content">
-            <div class="ad-banner">
-                Espaço para Banner do Google AdSense
+            <div class="text-left">
+                <h2>Como Gerenciar o Tempo de Tela das Crianças</h2>
+                <p>É verdade que o uso excessivo de dispositivos móveis por crianças é uma preocupação crescente. Muitos pais estão lutando para gerenciar o tempo de tela de seus filhos e estão vendo comportamentos negativos quando os dispositivos são retirados. Aqui estão algumas dicas que podem ajudar:</p>
+                <ul>
+                    <li><strong>Estabeleça limites claros:</strong> Defina regras sobre quando e por quanto tempo seu filho pode usar o celular.</li>
+                    <li><strong>Ofereça alternativas atraentes:</strong> Tente oferecer atividades alternativas que seu filho possa achar interessantes, como jogos ao ar livre ou colorir.</li>
+                    <li><strong>Seja um modelo:</strong> Limite seu próprio uso de dispositivos móveis.</li>
+                    <li><strong>Comunique-se:</strong> Converse com seu filho sobre a importância de limitar o tempo de tela.</li>
+                </ul>
             </div>
-            <h2>Como Gerenciar o Tempo de Tela das Crianças</h2>
-            <p>É verdade que o uso excessivo de dispositivos móveis por crianças é uma preocupação crescente. Muitos pais estão lutando para gerenciar o tempo de tela de seus filhos e estão vendo comportamentos negativos quando os dispositivos são retirados. Aqui estão algumas dicas que podem ajudar:</p>
-            <ul>
-                <li><strong>Estabeleça limites claros:</strong> Defina regras sobre quando e por quanto tempo seu filho pode usar o celular.</li>
-                <li><strong>Ofereça alternativas atraentes:</strong> Tente oferecer atividades alternativas que seu filho possa achar interessantes, como jogos ao ar livre ou colorir.</li>
-                <li><strong>Seja um modelo:</strong> Limite seu próprio uso de dispositivos móveis.</li>
-                <li><strong>Comunique-se:</strong> Converse com seu filho sobre a importância de limitar o tempo de tela.</li>
-            </ul>
-            <p>Lembre-se, cada criança é única e pode ser necessário experimentar diferentes estratégias. Temos uma oferta especial de final de ano que você não vai querer perder! Nosso eBook “105 Desenhos de Animais Fofinhos” normalmente custa R$20,00, mas por tempo limitado, estamos oferecendo por apenas R$5,99!</p>
-            <p><strong>105 Desenhos de Animais Fofinhos:</strong> Este eBook contém 105 desenhos únicos de animais fofinhos que as crianças vão adorar colorir.</p>
-            <p><strong>Produto Digital:</strong> Após a compra, o eBook será enviado diretamente para o seu e-mail.</p>
-            <p><strong>Impressão Ilimitada:</strong> Você pode imprimir as páginas quantas vezes quiser!</p>
-            <p>Esta promoção é válida apenas para o mês de dezembro, então não perca!</p>
-        </div>
-
+            <div class="text-right">
+                <p>Lembre-se, cada criança é única e pode ser necessário experimentar diferentes estratégias. Temos uma oferta especial de final de ano que você não vai querer perder! Nosso eBook “105 Desenhos de Animais Fofinhos” normalmente custa R$20,00, mas por tempo limitado, estamos oferecendo por apenas R$5,99!</p>
+                <p><strong>105 Desenhos de Animais Fofinhos:</strong> Este eBook contém 105 desenhos únicos de animais fofinhos que as crianças vão adorar colorir.</p>
+                <p><strong>Produto Digital:</strong> Após a compra, o eBook será enviado diretamente para o seu e-mail.</p>
+                <p><strong>Impressão Ilimitada:</strong> Você pode imprimir as páginas quantas vezes quiser!</p>
+                <p>Esta promoção é válida apenas para o mês de dezembro, então não perca!</p>
+                
+            </div>
+            
         <iframe 
-            src="https://www.youtube.com/embed/8buhegcheLE" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+        src="https://www.youtube.com/embed/8buhegcheLE" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
 
-        <div class="cta">
-            <a id="compre_ja" href="https://pay.hotmart.com/F88465474A?off=0ykph0kt">Compre Já</a>
+    <div class="cta">
+        <a id="compre_ja" href="https://pay.hotmart.com/F88465474A?off=0ykph0kt">Compre Já</a>
+    </div>
         </div>
+
     </div>
     
     <footer>
         <p>&copy; 2024 105 Desenhos para Colorir. Todos os direitos reservados.</p>
-        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        <p><a href="privacy.html">Política de Privacidade</a> | <a href="terms.html">Termos de Uso</a></p>
     </footer>
+    
 </body>
 </html>
