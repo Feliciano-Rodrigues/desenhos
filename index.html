@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça o produto que vai mudar sua vida. Descubra mais sobre as vantagens e benefícios agora.">
-    <title>105 desenhos para colorir</title>
+    <title>105 Desenhos para Colorir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f4f8;
             color: #333;
         }
         .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             width: 90%;
-            margin: auto;
+            margin: 20px auto;
             overflow: hidden;
+            flex-wrap: wrap;
         }
         header {
-            background: #333;
+            background: #4a90e2;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -30,38 +35,44 @@
             font-size: 2.5em;
         }
         .main-content {
+            flex: 1;
             padding: 20px;
-            background: #fff;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-top: 10px;
-            text-align: center; /* Alinha o conteúdo centralmente */
+            margin-right: 20px;
         }
-        .main-content img {
-            max-width: 305px;
-            height: auto;
-            display: block;
-            margin: auto;
+        .ad-banner {
+            width: 100%;
+            height: 150px; /* Diminuindo a altura do banner */
+            background: #ddd;
+            margin-top: 10px;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 150px; /* Ajustando para centralizar o texto */
+            font-size: 1em;
+            color: #666;
         }
         .main-content h2 {
-            color: #ee1313;
-            text-align: center;
-        }
-        .main-content h3 {
-            color: #333;
-            text-align: center;
+            color: #d64541;
+            margin: 10px 0;
         }
         .main-content p {
             text-align: justify;
-            margin-bottom: 20px;
+            margin: 10px 0;
+            line-height: 1.5;
         }
         .main-content iframe {
             display: block;
-            margin: 20px auto; /* Centraliza o iframe */
+            margin: 20px auto;
             width: 100%;
-            max-width: 560px; /* Limita a largura máxima do vídeo */
-            height: 315px; /* Proporção adequada para vídeos */
+            max-width: 900px;
+            height: 500px;
+            border: none;
         }
         .cta {
-            background: #28a745;
+            background: #4a90e2; /* Mudando a cor do botão para azul */
             color: #fff;
             padding: 15px;
             text-align: center;
@@ -69,12 +80,14 @@
             font-weight: bold;
             cursor: pointer;
             margin-top: 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
         .cta:hover {
-            background: #218838;
+            background: #357ABD; /* Um tom mais escuro do azul */
         }
         footer {
-            background: #333;
+            background: #4a90e2;
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -87,20 +100,12 @@
             color: #fff;
             text-decoration: none;
         }
-        #compre_ja {
-            color: #fff;
-            text-decoration: none;
-        }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8em;
             }
             .main-content h2 {
-                font-size: 1.5em;
-            }
-            .main-content h3 {
                 font-size: 1.5em;
             }
             .cta {
@@ -116,65 +121,72 @@
             .main-content h2 {
                 font-size: 1.2em;
             }
-            .main-content h3 {
-                font-size: 1.2em;
-            }
             .cta {
                 padding: 8px;
                 font-size: 0.9em;
             }
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-content {
+                margin-right: 0;
+            }
         }
     </style>
     <script>
-        // Função para fazer o título piscar
         function blinkTitle() {
             const title = document.querySelector('header h1');
             setInterval(() => {
-                // Alterna entre 1 (visível) e 0 (invisível)
                 title.style.opacity = (title.style.opacity == '0' ? '1' : '0');
-            }, 400); // Alterna a visibilidade a cada 1 segundo
+            }, 400);
         }
 
-        // Chama a função ao carregar a página
         window.onload = function() {
             blinkTitle();
         };
     </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-948342225"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-948342225');
-</script>
 </head>
 <body>
 
     <header>
         <h1>OFERTA POR TEMPO LIMITADO! R$:5,99</h1>
-        
     </header>
 
     <div class="container">
-        <section class="main-content">
-            <!-- <img src="#" alt="Imagem do Produto"> -->
-            <h2>“Nosso eBook “105 Desenhos de Animais Fofinhos” é um produto 100% digital. Comprando o eBook, ele será enviado diretamente ao seu e-mail.”
-            </h2>
-            <!-- <h3> Muitos pais estão lutando para gerenciar o tempo de tela de seus filhos e estão vendo comportamentos negativos quando os dispositivos são retirados.</h3> -->
-
-            <!-- Vídeo centralizado -->
-            <iframe 
-                src="https://www.youtube.com/embed/8buhegcheLE" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-    
-            <div class="cta">
-                <a id="compre_ja" href="https://pay.hotmart.com/F88465474A?off=0ykph0kt">Compre Já</a>
+        <div class="main-content">
+            <div class="ad-banner">
+                Espaço para Banner do Google AdSense
             </div>
-        </section>
+            <h2>Como Gerenciar o Tempo de Tela das Crianças</h2>
+            <p>É verdade que o uso excessivo de dispositivos móveis por crianças é uma preocupação crescente. Muitos pais estão lutando para gerenciar o tempo de tela de seus filhos e estão vendo comportamentos negativos quando os dispositivos são retirados. Aqui estão algumas dicas que podem ajudar:</p>
+            <ul>
+                <li><strong>Estabeleça limites claros:</strong> Defina regras sobre quando e por quanto tempo seu filho pode usar o celular.</li>
+                <li><strong>Ofereça alternativas atraentes:</strong> Tente oferecer atividades alternativas que seu filho possa achar interessantes, como jogos ao ar livre ou colorir.</li>
+                <li><strong>Seja um modelo:</strong> Limite seu próprio uso de dispositivos móveis.</li>
+                <li><strong>Comunique-se:</strong> Converse com seu filho sobre a importância de limitar o tempo de tela.</li>
+            </ul>
+            <p>Lembre-se, cada criança é única e pode ser necessário experimentar diferentes estratégias. Temos uma oferta especial de final de ano que você não vai querer perder! Nosso eBook “105 Desenhos de Animais Fofinhos” normalmente custa R$20,00, mas por tempo limitado, estamos oferecendo por apenas R$5,99!</p>
+            <p><strong>105 Desenhos de Animais Fofinhos:</strong> Este eBook contém 105 desenhos únicos de animais fofinhos que as crianças vão adorar colorir.</p>
+            <p><strong>Produto Digital:</strong> Após a compra, o eBook será enviado diretamente para o seu e-mail.</p>
+            <p><strong>Impressão Ilimitada:</strong> Você pode imprimir as páginas quantas vezes quiser!</p>
+            <p>Esta promoção é válida apenas para o mês de dezembro, então não perca!</p>
+        </div>
+
+        <iframe 
+            src="https://www.youtube.com/embed/8buhegcheLE" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+
+        <div class="cta">
+            <a id="compre_ja" href="https://pay.hotmart.com/F88465474A?off=0ykph0kt">Compre Já</a>
+        </div>
     </div>
+    
+    <footer>
+        <p>&copy; 2024 105 Desenhos para Colorir. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
 </body>
 </html>
